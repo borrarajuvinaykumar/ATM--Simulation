@@ -29,12 +29,7 @@ public class ATMMachineMiniProject {
 	public void setWithdrawAmount(double withdrawAmount) {
 		this.withdrawAmount = withdrawAmount;
 	}
-//	toString  method
-	@Override
-	public String toString() {
-		return "ATMMachineMiniProject [balance=" + balance + ", depositeAmount=" + depositeAmount + ", withdrawAmount="
-				+ withdrawAmount + "]";
-	}
+
 	
 
 }
