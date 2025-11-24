@@ -1,7 +1,6 @@
 package ATMProject;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.LinkedHashMap;
 import java.util.Set;
 
 public class ATMoperationImplements implements ATMinterface {
@@ -20,7 +19,7 @@ public class ATMoperationImplements implements ATMinterface {
 			if(withdrawAmount<=atm.getBalance() ) {
 				System.out.println("Collect the cash:"+withdrawAmount);
 				atm.setBalance(atm.getBalance()-withdrawAmount);
-				ministmt.put(++id,":"+withdrawAmount +":Amount withdraw");
+				ministmt.put(++id,")"+withdrawAmount +":Amount withdraw");
 				viewBalance();
 			}else {
 				System.out.println("Insufficient Balance:");
