@@ -35,7 +35,7 @@ public class ATMoperationImplements implements ATMinterface {
 	public void depositAmount(double depositeAmount) {
 		System.out.println("depositedAmount is:"+depositeAmount);
 		atm.setBalance(atm.getBalance()+depositeAmount);
-		ministmt.put((long)depositeAmount, "depositeAmount successfully");
+		ministmt.put((long)depositeAmount, ":depositeAmount successfully");
 		viewBalance();
 
 	}
