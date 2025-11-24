@@ -10,10 +10,10 @@ public class User {
 		Scanner sc=new Scanner(System.in);
 		int atmnumber=54321;
 		int atmpin=123;
-		System.out.println("WELCOME TO ATM MACHINE");
-		System.out.println("ENTER THE ATM NUMBER");
+		System.out.println("WELCOME TO ATM MACHINE:");
+		System.out.println("ENTER THE ATM NUMBER:");
 		int atmnumber1=sc.nextInt();
-		System.out.println("ENTER THE ATM PIN");
+		System.out.println("ENTER THE ATM PIN:");
 		int atmpin2=sc.nextInt();
 		if(atmnumber==atmnumber1&&atmpin==atmpin2) {
 			while(true) {
@@ -24,11 +24,11 @@ public class User {
 			if(choice==1) {
 				imp1.viewBalance();
 			}else if(choice==2) {
-				System.out.println("Enter the amount to withdraw");
+				System.out.println("Enter the amount to withdraw:");
 				double withdrawamount=sc.nextDouble();
 				imp1.withdrawAmount(withdrawamount);
 			}else if(choice==3) {
-				System.out.println("Enter the amount to deposit");
+				System.out.println("Enter the amount to deposit:");
 				double depositeAmount=sc.nextDouble();
 				imp1.depositAmount(depositeAmount);
 			}else if(choice==4) {
