@@ -6,7 +6,8 @@ import java.util.Set;
 
 public class ATMoperationImplements implements ATMinterface {
 	ATMMachineMiniProject atm=new ATMMachineMiniProject();
-	Map<Double,String>ministmt=new HashMap<>();
+	LinkedHashMap<Long,String>ministmt=new LinkedHashMap<>();
+	long id=0;
 
 	@Override
 	public void viewBalance() {
@@ -19,7 +20,7 @@ public class ATMoperationImplements implements ATMinterface {
 			if(withdrawAmount<=atm.getBalance() ) {
 				System.out.println("Collect the cash"+withdrawAmount);
 				atm.setBalance(atm.getBalance()-withdrawAmount);
-				ministmt.put(withdrawAmount, "Amount withdraw");
+				ministmt.put(++id,":"+withdrawAmount +"Amount withdraw");
 				viewBalance();
 			}else {
 				System.out.println("Insufficient Balance");
@@ -35,15 +36,15 @@ public class ATMoperationImplements implements ATMinterface {
 	public void depositAmount(double depositeAmount) {
 		System.out.println("depositedAmount is:"+depositeAmount);
 		atm.setBalance(atm.getBalance()+depositeAmount);
-		ministmt.put(depositeAmount, "depositeAmount successfully");
+		ministmt.put((long)depositeAmount, "depositeAmount successfully");
 		viewBalance();
 
 	}
 
 	@Override
 	public void viewMiniStatement() {
-		Set<Double>set =ministmt.keySet();
-		for(Double d:set) {
+		Set<Long>set =ministmt.keySet();
+		for(long d:set) {
 			System.out.println(d+""+ministmt.get(d));
 
 		}
