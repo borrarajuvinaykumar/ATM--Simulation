@@ -18,12 +18,12 @@ public class ATMoperationImplements implements ATMinterface {
 	public void withdrawAmount(double withdrawAmount) {
 		if( withdrawAmount%500==0) {
 			if(withdrawAmount<=atm.getBalance() ) {
-				System.out.println("Collect the cash"+withdrawAmount);
+				System.out.println("Collect the cash:"+withdrawAmount);
 				atm.setBalance(atm.getBalance()-withdrawAmount);
-				ministmt.put(++id,":"+withdrawAmount +"Amount withdraw");
+				ministmt.put(++id,":"+withdrawAmount +":Amount withdraw");
 				viewBalance();
 			}else {
-				System.out.println("Insufficient Balance");
+				System.out.println("Insufficient Balance:");
 			}
 
 		} else {
